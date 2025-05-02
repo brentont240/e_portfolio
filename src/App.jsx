@@ -1,15 +1,19 @@
-import Header from "./components/header"
-import Footer from "./components/footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
 
 function App() {
   return(
-    <>
+    <Router basename="/e_portfolio">
       <Header />
         <main>
-            <p>stuff</p>
+            <Routes>
+              <Route path="/" element={<Home />} />
+            </Routes>
         </main>
       <Footer />
-    </>
+    </Router>
   );
 }
 
