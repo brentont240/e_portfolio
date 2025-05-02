@@ -1,7 +1,6 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
@@ -41,8 +40,7 @@ function Header(props) {
     const container = window !== undefined ? () => window().document.body : undefined;
   
     return (
-        <>
-            <CssBaseline />
+        <header>
             <AppBar component="nav">
             <Toolbar>
                 <Typography
@@ -87,8 +85,9 @@ function Header(props) {
             >
                 {drawer}
             </Drawer>
+            <Toolbar /> {/* creates empty space */}
             </nav>
-        </>
+        </header>
     );
 }
 
