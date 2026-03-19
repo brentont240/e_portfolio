@@ -7,7 +7,8 @@ import {
     Card,
     CardContent,
     CardActions,
-    Button, Divider,
+    Button,
+    Divider,
 } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import CardMedia from "@mui/material/CardMedia";
@@ -15,6 +16,7 @@ import CardActionArea from "@mui/material/CardActionArea";
 // import topDivider from "../assets/topWaves.svg";
 import avatarImg from "../images/avatarImg.jpg";
 import { GradFlow } from "gradflow";
+import { CheckScreenSize } from "../utils/checkScreenSize.js";
 
 // TODO: play with some of the colors for dark mode?
 // TODO: make it look better on smaller and larger
@@ -64,14 +66,14 @@ function Home() {
                     {/* TODO: play with the sizes to get it looking good!!!! */}
                     {/* <Grid size={{ xs: 10, md: 8, lg: 7 }}> */}
                     <Grid size={{ xs: 12, md: 6 }}>
-                        <Typography variant="h1">Brenton Trebilcock</Typography>
-                        <Typography variant="h2">Software Developer</Typography>
+                        <Typography variant={CheckScreenSize("xs") ? "h2" : "h1"}>Brenton Trebilcock</Typography>
+                        <Typography variant={CheckScreenSize("xs") ? "h3" : "h2"}>Software Developer</Typography>
                     </Grid>
                     {/* TODO: play with the sizes to get it looking good!!! */}
                     {/* TODO: play with the sizes to get it looking good!!!! */}
                     {/* <Grid size={{ xs: 10, md: 6, lg: 5 }}> */}
                     <Grid size={{ xs: 12, md: 6 }}>
-                    {/* <Grid size="grow"> */}
+                        {/* <Grid size="grow"> */}
                         <Card>
                             <CardActionArea>
                                 <CardMedia
@@ -88,14 +90,10 @@ function Home() {
                                         gutterBottom
                                         variant="h4"
                                         component="div"
-                                        sx={{ color: "text.secondary" }}
                                     >
                                         About Me
                                     </Typography>
-                                    <Typography
-                                        variant="body1"
-                                        sx={{ color: "text.secondary" }}
-                                    >
+                                    <Typography variant="body1">
                                         I am a highly motivated individual who
                                         is passionate about software engineering
                                         and creative problem solving. My
@@ -131,20 +129,16 @@ export default Home;
 
 // use prettier on the pages!!!!!!!!
 
-
-
-                    // TODO: use this to show projects */}
-                    // {/* <iframe
-                    //   src="https://scamsentry.netlify.app/"
-                    //   width="100%"
-                    //   height="600px"
-                    //   style={{ border: 'none' }}
-                    //   title="PDF Viewer"
-                    // />
-
+// TODO: use this to show projects */}
+// {/* <iframe
+//   src="https://scamsentry.netlify.app/"
+//   width="100%"
+//   height="600px"
+//   style={{ border: 'none' }}
+//   title="PDF Viewer"
+// />
 
 // Note: Column widths are integer values between 1 and 12. For example, an item with size={6} occupies half of the grid container's width.
 // https://mui.com/material-ui/react-grid/
-
 
 // FIXME: NOTE THINGS LIKE MY={} WILL BE REMOVED USED SX={MY:} INSTEAD!!!! (SEE DOCUMENTATION)

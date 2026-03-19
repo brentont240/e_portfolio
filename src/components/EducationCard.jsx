@@ -6,7 +6,7 @@ function EducationCard({ education }) {
         <Box>
             <Grid container spacing={3}>
                 {education.map((item) => (
-                    <Grid size={{ xs: 12, md: 6 }}>
+                    <Grid size={{ xs: 12, md: 6 }} key={item.school}>
                         <Card sx={{ height: "100%" }} className="hoverGrow">
                             <CardContent>
                                 <Typography

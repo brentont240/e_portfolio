@@ -1,11 +1,13 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Container } from "@mui/material";
 
 function Contact() {
     return (
-        <Box sx={{ my:2 }}>
-            <Typography variant="h2" color="">
-                In development ...
-            </Typography>
+        <Box >
+            <Container maxWidth="xl">
+                <Typography variant="h1" align="center" sx={{ my:2 }}>
+                    Contact
+                </Typography>
+            </Container>
         </Box>
     );
 }

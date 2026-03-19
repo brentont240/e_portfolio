@@ -15,11 +15,7 @@ import work from "../data/work.json";
 import SkillSection from "../components/SkillSection.jsx";
 import EducationCard from "../components/EducationCard.jsx";
 import WorkCard from "../components/WorkCard.jsx";
-
-// !! TODO: MAYBE PUT THE PURPLE DIVIDER AROUND THE SECTIONS HERE INSTEAD OF PROFICIENT ETC...
-// !! TODO: MAYBE PUT THE PURPLE DIVIDER AROUND THE SECTIONS HERE INSTEAD OF PROFICIENT ETC...
-// !! TODO: MAYBE PUT THE PURPLE DIVIDER AROUND THE SECTIONS HERE INSTEAD OF PROFICIENT ETC...
-// !! TODO: MAYBE PUT THE PURPLE DIVIDER AROUND THE SECTIONS HERE INSTEAD OF PROFICIENT ETC...
+import { CheckScreenSize } from "../utils/checkScreenSize.js";
 
 function Experience() {
     // FIXME: get the resume link to scroll down to the resume section when clicked (top button!!!)
@@ -28,7 +24,11 @@ function Experience() {
         <Box>
             <Container maxWidth="xl">
                 <Box>
-                    <Typography variant="h1" align="center" sx={{ mt: 2 }}>
+                    <Typography
+                        variant={CheckScreenSize("xs") ? "h2" : "h1"}
+                        align="center"
+                        sx={{ mt: 2 }}
+                    >
                         Experience
                     </Typography>
                     <Box
@@ -40,10 +40,12 @@ function Experience() {
                     >
                         <ButtonGroup
                             variant="contained"
+                            // fullWidth
                             aria-label="Basic button group"
                             size="large"
                             // FIXME: get this to work? or something similar?
                             // orientation={{ xs: "vertical", sm: "horizontal" }}
+                            orientation={CheckScreenSize("xs") ? "vertical" : "horizontal"}
                         >
                             {/* TODO: IF I WANT LINKS TO THE DIFFERENT SECTIONS I CAN USE THIS (IDK IF IT'S NEEDED OR NOT?) */}
                             {/* FIXME: make it work better on mobile !!! */}

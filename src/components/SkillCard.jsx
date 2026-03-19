@@ -33,14 +33,6 @@ function SkillCard({ skills }) {
                         {/* height 100% makes it so they are same height */}
                         <Card sx={{ height: "100%" }} className="hoverGrow">
                             <CardContent>
-                                {/* <Typography
-                                    variant="h4"
-                                    color="secondary"
-                                    align="center"
-                                >
-                                    <IconImg iconName={skill.icon} />{" "}
-                                    {skill.category}
-                                </Typography> */}
                                 <Divider>
                                     <Box
                                         sx={{
