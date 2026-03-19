@@ -37,7 +37,11 @@ function Navbar(props) {
             <List>
                 {ROUTES.map((route) => (
                     <ListItem key={route.path} disablePadding>
-                        <ListItemButton sx={{ textAlign: "center" }}>
+                        <ListItemButton
+                            sx={{ textAlign: "center" }}
+                            component={Link}
+                            to={route.path}
+                        >
                             <ListItemText primary={route.name} />
                         </ListItemButton>
                     </ListItem>

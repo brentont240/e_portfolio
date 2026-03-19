@@ -10,18 +10,21 @@ import {
 } from "@mui/material";
 import proficientSkills from "../data/proficientSkills.json";
 import familiarSkills from "../data/familiarSkills.json";
+import education from "../data/education.json";
+import work from "../data/work.json";
 import SkillSection from "../components/SkillSection.jsx";
-import SkillCard from "../components/SkillCard";
-import Accordion from "@mui/material/Accordion";
+import EducationCard from "../components/EducationCard.jsx";
+import WorkCard from "../components/WorkCard.jsx";
+
+// !! TODO: MAYBE PUT THE PURPLE DIVIDER AROUND THE SECTIONS HERE INSTEAD OF PROFICIENT ETC...
+// !! TODO: MAYBE PUT THE PURPLE DIVIDER AROUND THE SECTIONS HERE INSTEAD OF PROFICIENT ETC...
+// !! TODO: MAYBE PUT THE PURPLE DIVIDER AROUND THE SECTIONS HERE INSTEAD OF PROFICIENT ETC...
+// !! TODO: MAYBE PUT THE PURPLE DIVIDER AROUND THE SECTIONS HERE INSTEAD OF PROFICIENT ETC...
 
 function Experience() {
-    // FIXME: get the resume link to scroll down to the resume section when clicked
+    // FIXME: get the resume link to scroll down to the resume section when clicked (top button!!!)
 
     return (
-        // <Box sx={{ width: "100%" }}>
-        //     <Typography variant="h1">Test</Typography>
-        //     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, non, quia rerum ullam distinctio repellat quam saepe fuga iure quibusdam minus repudiandae perferendis quaerat eum magni voluptates ipsam accusamus nam!
-        // </Box>
         <Box>
             <Container maxWidth="xl">
                 <Box>
@@ -30,7 +33,7 @@ function Experience() {
                     </Typography>
                     <Box
                         sx={{
-                            display: "flex",                          
+                            display: "flex",
                             justifyContent: "center",
                             my: 2,
                         }}
@@ -43,27 +46,56 @@ function Experience() {
                             // orientation={{ xs: "vertical", sm: "horizontal" }}
                         >
                             {/* TODO: IF I WANT LINKS TO THE DIFFERENT SECTIONS I CAN USE THIS (IDK IF IT'S NEEDED OR NOT?) */}
-                            <Button>Skills</Button>
+                            {/* FIXME: make it work better on mobile !!! */}
+                            <Button href="#skills">Skills</Button>
                             <Button href="#education">Education</Button>
-                            <Button>Work Experience</Button>
+                            <Button href="#workExperience">
+                                Work Experience
+                            </Button>
                             <Button href="#resume">Resume</Button>
                         </ButtonGroup>
                     </Box>
-                    <Typography variant="h2">Skills</Typography>
-                    <SkillSection
-                        title={"Proficient"}
-                        skills={proficientSkills}
-                    />
-                    {/* add some space here */}
-                    <SkillSection
-                        title={"Familiar With"}
-                        skills={familiarSkills}
-                    />
+                    <Box sx={{ my: 2 }} id="skills">
+                        <Divider className="sectionDividerPrimary">
+                            <Typography variant="h2">Skills</Typography>
+                        </Divider>
+                        <SkillSection
+                            title={"Proficient"}
+                            skills={proficientSkills}
+                        />
+                        <Box sx={{ mb: 2 }} />
+                        <SkillSection
+                            title={"Familiar With"}
+                            skills={familiarSkills}
+                        />
+                    </Box>
                     <Box sx={{ my: 2 }} id="education">
-                        <Typography variant="h2">Education</Typography>
+                        <Divider
+                            className="sectionDividerPrimary"
+                            sx={{ mb: 2 }}
+                        >
+                            <Typography variant="h2">Education</Typography>
+                        </Divider>
+                        <EducationCard education={education} />
+                    </Box>
+                    <Box sx={{ my: 2 }} id="workExperience">
+                        <Divider
+                            className="sectionDividerPrimary"
+                            sx={{ mb: 2 }}
+                        >
+                            <Typography variant="h2">
+                                Work Experience
+                            </Typography>
+                        </Divider>
+                        <WorkCard work={work} />
                     </Box>
                     <Box sx={{ my: 2 }} id="resume">
-                        <Typography variant="h2">Resume</Typography>
+                        <Divider
+                            className="sectionDividerPrimary"
+                            sx={{ mb: 2 }}
+                        >
+                            <Typography variant="h2">Resume</Typography>
+                        </Divider>
                         {/* fix things for this to look better */}
                         <iframe
                             src={"/e_portfolio/brentonResume.pdf"}

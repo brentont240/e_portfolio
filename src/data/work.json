@@ -1,0 +1,51 @@
+[
+    {
+        "companyName": "Agrippon",
+        "from": "March 2025",
+        "to": "Now",
+        "jobTitle": "Software Developer",
+        "details": [
+            "Develop and maintain full-stack web applications using React, AWS, Node.js, and MongoDB",
+            "Created and Implement unit tests for front and back end using Jest",
+            "Worked closely with QA and developers using Jira and GitHub",
+            "Resolve Jira tickets by implementing bug fixes and designing new features for the application"
+        ]
+    },
+    {
+        "companyName": "CurriQūnet",
+        "from": "May 2022",
+        "to": "May 2023",
+        "jobTitle": "Software Developer",
+        "details": [
+            "Utilized Microsoft SQL Server to construct customized curriculum solutions for numerous clients",
+            "Implemented database automation to streamline documentation of clients' sites, resulting in a 50% reduction in completion time",
+            "Designed catalogs for clients using a custom builder, HTML, and CSS",
+            "Conducted quality assurance by thoroughly testing hundreds of tickets for clients and performed end-to-end testing to ensure customer satisfaction",
+            "Collaborated with a multi-functional team in an Agile/Scrum environment"
+        ]
+    },
+    {
+        "companyName": "Ullrich Insurance Agency",
+        "from": "April 2021",
+        "to": "December 2022",
+        "jobTitle": "Software Developer",
+        "details": [
+            "Redesigned policy service center with JavaScript and CSS to provide a more seamless experience for customers",
+            "Constructed a team report dashboard for the sales team in order to determine areas of interest and to better track performance",
+            "Designed and built a new website, My Agency System, to provide tools and resources to other insurance agencies",
+            "Boosted customer outreach and retention rates by creating and optimizing marketing automations",
+            "Developed and implemented email templates with JavaScript, resulting in improved communication with clients and increased productivity for the sales team"
+        ]
+    },
+    {
+        "companyName": "Dotted Dot Marketing",
+        "from": "July 2021",
+        "to": "December 2021",
+        "jobTitle": "Frontend Developer",
+        "details": [
+            "Developed modern and responsive websites for clients utilizing CSS, WordPress, Wix, and Divi",
+            "Created and interpreted website mockups using Figma, allowing for clear communication with the design team and efficient development of the final product",
+            "Remodeled client’s existing websites to be more appealing, functional, and user-friendly"
+        ]
+    }
+]

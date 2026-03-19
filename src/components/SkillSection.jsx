@@ -2,9 +2,10 @@ import { Box, Typography, Divider } from "@mui/material";
 import SkillCard from "./SkillCard";
 
 function SkillSection({ title, skills }) {
+    // TODO: ADD MB TO TYPOGRAPHY
     return (
         <Box>
-            <Divider
+            {/* <Divider
                 textAlign="left"
                 sx={{
                     "&::before, &::after": {
@@ -13,11 +14,11 @@ function SkillSection({ title, skills }) {
                     },
                     mb: 2,
                 }}
-            >
-                <Typography variant="h2" color="">
+            > */}
+                <Typography GYT variant="h2">
                     {title}
                 </Typography>
-            </Divider>
+            {/* </Divider> */}
             <SkillCard skills={skills} />
         </Box>
     );

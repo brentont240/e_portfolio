@@ -1,13 +1,12 @@
 import { Box, Typography, Grid, Card, CardContent } from "@mui/material";
 
-function WorkCard({ work }) {
+function EducationCard({ education }) {
+    // TODO: ADD KEYS
     return (
-        //TODO: FIX ISSUE WITH KEYS!!!!
         <Box>
             <Grid container spacing={3}>
-                {work.map((item, index) => (
-                    // should the key be different???!!!
-                    <Grid size={{ xs: 12, md: 6 }} key={index}>
+                {education.map((item) => (
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <Card sx={{ height: "100%" }} className="hoverGrow">
                             <CardContent>
                                 <Typography
@@ -15,26 +14,19 @@ function WorkCard({ work }) {
                                     variant="h4"
                                     color="secondary.main"
                                 >
-                                    {item.companyName}
+                                    {item.school}
                                 </Typography>
                                 <Typography
-                                    // gutterBottom
+                                    gutterBottom
                                     variant="body1"
                                     color="text.secondary"
                                     sx={{ fontStyle: "italic" }}
                                 >
-                                    {item.from} - {item.to}
+                                    Graduated in {item.dateGraduated}
                                 </Typography>
-                                <Typography gutterBottom variant="body1">
-                                    {item.jobTitle}
+                                <Typography variant="body1">
+                                    {item.degree}
                                 </Typography>
-                                <ul>
-                                    <Typography variant="body1">
-                                        {item.details.map((detail, index) => (
-                                            <li key={index}>{detail}</li>
-                                        ))}
-                                    </Typography>
-                                </ul>
                             </CardContent>
                         </Card>
                     </Grid>
@@ -44,4 +36,4 @@ function WorkCard({ work }) {
     );
 }
 
-export default WorkCard;
+export default EducationCard;
