@@ -1,0 +1,1 @@
+.hoverGrow{transition:transform .3 ease-in-out}.hoverGrow:hover{transform:scale(1.05);filter:brightness(1.25)}.MuiDivider-root.sectionDividerPrimary:before,.MuiDivider-root.sectionDividerPrimary:after{border-color:var(--mui-palette-primary-main);border-width:3px}
