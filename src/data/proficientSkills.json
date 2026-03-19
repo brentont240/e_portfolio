@@ -1,0 +1,27 @@
+[
+    {
+        "category": "Frontend",
+        "icon": "HtmlIcon",
+        "skills": ["React", "JavaScript (ES6+)", "HTML5", "CSS3", "Bootstrap"]
+    },
+    {
+        "category": "Backend",
+        "icon": "IntegrationInstructionsIcon",
+        "skills": ["Node.js", "Express.js"]
+    },
+    {
+        "category": "APIs",
+        "icon": "CloudSyncIcon",
+        "skills": ["RESTful APIs"]
+    },
+    {
+        "category": "Databases",
+        "icon": "DatasetIcon",
+        "skills": ["Microsoft SQL Server", "MongoDB"]
+    },
+    {
+        "category": "Collaboration",
+        "icon": "GroupsIcon",
+        "skills": ["Agile", "Scrum", "Jira", "Confluence", "GitHub", "Git", "Bitbucket"]
+    }
+]

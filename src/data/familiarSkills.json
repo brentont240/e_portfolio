@@ -1,0 +1,22 @@
+[
+    {
+        "category": "Other Languages",
+        "icon": "CodeIcon",
+        "skills": ["C", "C++", "Java", "Python", "Typescript", "Erlang"]
+    },
+    {
+        "category": "Cloud & DevOps",
+        "icon": "CloudIcon",
+        "skills": ["AWS", "Heroku", "Netlify", "PowerShell"]
+    },
+    {
+        "category": "Testing",
+        "icon": "AssignmentIcon",
+        "skills": ["Jest", "Vitest"]
+    },
+    {
+        "category": "UI Libraries",
+        "icon": "MenuBookIcon",
+        "skills": ["Material UI"]
+    }
+]

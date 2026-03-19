@@ -4,6 +4,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { theme } from './styles/theme';
 import App from './App.jsx'
+import "./styles/App.css"
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

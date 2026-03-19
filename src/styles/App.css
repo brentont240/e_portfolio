@@ -1,6 +1,8 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.hoverGrow {
+  transition: transform 0.3 ease-in-out;
+}
+
+.hoverGrow:hover {
+  transform: scale(1.05);
+  filter: brightness(1.25);
 }
