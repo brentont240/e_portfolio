@@ -57,6 +57,8 @@ function Experience() {
                             <Button href="#resume">Resume</Button>
                         </ButtonGroup>
                     </Box>
+                    {/* TODO: Add more skills and other things that aren't on resume!!! !!! !!! !!! */}
+                    {/* FIXME: ADD VITE TESTING TO RESUME AND UPDATE AGRIPPON TEXT !!! !!! !!! !!! */}
                     <Box sx={{ my: 2 }} id="skills">
                         <Divider className="sectionDividerPrimary">
                             <Typography variant="h2">Skills</Typography>
@@ -86,7 +88,11 @@ function Experience() {
                             sx={{ mb: 2 }}
                         >
                             {/* TODO: GET THIS TO WORK ON MOBILE (NOT JUST MAKE TEXT SMALLER!!!) */}
-                            <Typography variant="h2">
+                            {/* <Typography variant="h2" sx={{ whiteSpace: CheckScreenSize("xs") ? "normal" : "nowrap"}}> */}
+                            <Typography variant="h2" sx={{ whiteSpace: {
+                                "xs": "normal",
+                                "sm": "nowrap",
+                            }}}>
                                 Work Experience
                             </Typography>
                         </Divider>
