@@ -121,6 +121,8 @@ function Home() {
 
 export default Home;
 
+// TODO: add page titles and such for this? (in a component?)
+
 // TODO: MAKE COMPONETS FOR THINGS LIKE SKILL CARDS, JOB EXPERIENCE ETC, PROJECTS. (THEN PERHAPS JUST MAKE SOME JSON FILES AND LOAD IT ALL UP BABY!!!)
 
 // maybe find a cool background / shader to use

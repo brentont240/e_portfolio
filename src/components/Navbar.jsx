@@ -35,17 +35,22 @@ function Navbar(props) {
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
             <List>
-                {ROUTES.map((route) => (
-                    <ListItem key={route.path} disablePadding>
-                        <ListItemButton
-                            sx={{ textAlign: "center" }}
-                            component={Link}
-                            to={route.path}
-                        >
-                            <ListItemText primary={route.name} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
+                {ROUTES.map((route) => {
+                    if (route.path === "*") {
+                        return;
+                    }
+                    return (
+                        <ListItem key={route.path} disablePadding>
+                            <ListItemButton
+                                sx={{ textAlign: "center" }}
+                                component={Link}
+                                to={route.path}
+                            >
+                                <ListItemText primary={route.name} />
+                            </ListItemButton>
+                        </ListItem>
+                    );
+                })}
             </List>
         </Box>
     );
@@ -69,6 +74,9 @@ function Navbar(props) {
                             {ROUTES.map((route) => {
                                 const isActive = route.path === location.pathname;
                                 // TODO: see if this is how we want to do active links!
+                                if (route.path === "*") {
+                                    return;
+                                }
                                 return (
                                     <Button
                                         key={route.path}

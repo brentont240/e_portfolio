@@ -2,6 +2,7 @@ import Home from "../pages/Home";
 import Experience from "../pages/Experience";
 import Projects from "../pages/Projects";
 import Contact from "../pages/Contact";
+import PageNotFound from "../pages/PageNotFound";
 
 export const ROUTES = [
   {
@@ -28,5 +29,10 @@ export const ROUTES = [
     path: "/contact",
     name: "Contact",
     Component: Contact,
+  },
+  {
+    path: "*",
+    name: "PageNotFound",
+    Component: PageNotFound,
   },
 ];
