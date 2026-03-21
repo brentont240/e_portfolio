@@ -85,6 +85,7 @@ function Experience() {
                             className="sectionDividerPrimary"
                             sx={{ mb: 2 }}
                         >
+                            {/* TODO: GET THIS TO WORK ON MOBILE (NOT JUST MAKE TEXT SMALLER!!!) */}
                             <Typography variant="h2">
                                 Work Experience
                             </Typography>

@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Email",
+        "icon": "EmailIcon",
+        "link": "brentontreb@gmail.com",
+        "type": "email"
+    },
+    {
+        "name": "LinkedIn",
+        "icon": "LinkedInIcon",
+        "link": "https://www.linkedin.com/in/brenton-trebilcock/",
+        "type": "website"
+    },
+    {
+        "name": "GitHub",
+        "icon": "GitHubIcon",
+        "link": "https://github.com/brentont240",
+        "type": "website"
+    }
+]

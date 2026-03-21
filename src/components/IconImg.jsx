@@ -7,6 +7,9 @@ import AssignmentIcon from '@mui/icons-material/Assignment';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import DatasetIcon from '@mui/icons-material/Dataset';
 import CloudSyncIcon from '@mui/icons-material/CloudSync';
+import EmailIcon from '@mui/icons-material/Email';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const iconMap = {
     GroupsIcon: GroupsIcon,
@@ -18,12 +21,15 @@ const iconMap = {
     MenuBookIcon: MenuBookIcon,
     DatasetIcon: DatasetIcon,
     CloudSyncIcon: CloudSyncIcon,
+    EmailIcon: EmailIcon,
+    GitHubIcon: GitHubIcon,
+    LinkedInIcon: LinkedInIcon,
 };
 
-function IconImg({ iconName }) {
+function IconImg({ iconName, size }) {
     const IconComponent = iconMap[iconName];
 
-    return IconComponent ? <IconComponent /> : null;
+    return IconComponent ? <IconComponent fontSize={size}/> : null;
 }
 
 export default IconImg;

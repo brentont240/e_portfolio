@@ -7,8 +7,8 @@ function Footer() {
         <footer>
             <Box
             sx={{
-              height: 100,
-              backgroundColor: "action.disabledBackground"
+              // height: 100,
+              // backgroundColor: "action.disabledBackground"
             }}
             >
                 {/* <Typography variant="h3" color="primary.main" align="center" mt={1}>Footer here?</Typography> */}
