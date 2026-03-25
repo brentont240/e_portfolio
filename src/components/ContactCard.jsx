@@ -22,7 +22,7 @@ function ContactCard({ contacts }) {
                                 <Typography
                                     gutterBottom
                                     variant="h3"
-                                    color="primary.main"
+                                    color="primary.light"
                                 >
                                     <IconImg
                                         iconName={contact.icon}
