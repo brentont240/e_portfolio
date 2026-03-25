@@ -151,10 +151,14 @@ function Experience() {
                         </Divider>
                         {/* fix things for this to look better */}
                         <iframe
-                            src={"/e_portfolio/brentonResume.pdf"}
+                            // src={"/e_portfolio/brentonResume.pdf"}
+                            src={`/e_portfolio/brentonResume.pdf${ CheckScreenSize("sm") ? "#zoom=page-width" : ""}`}
                             type="application/pdf"
-                            width="100%"
-                            height="750px"
+                            style={{
+                                width: "100%",
+                                height: "clamp(750px, 80vh, 100vh)",
+                                border: "none"
+                            }}
                         />
                     </Box>
                 </Box>
