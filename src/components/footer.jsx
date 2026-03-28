@@ -1,70 +1,81 @@
-// import waveDivider from "../assets/layeredWaves.svg";
-import { Box, Paper, Typography, Container, Grid, Divider } from "@mui/material";
+import {
+    Box,
+    Paper,
+    Typography,
+    Container,
+    Grid,
+    Divider,
+    Link,
+} from "@mui/material";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-// maybe get the thing to work idk????
 function Footer() {
     return (
-        // change to box component header?
-        <footer>
-            <Box
+        <Box component="footer">
+            <Paper
+                variant="elevation"
+                elevation="2"
+                square={true}
                 sx={{
-                    // height: 100,
-                    // backgroundColor: "action.disabledBackground"
+                    py: 2,
                 }}
             >
-                {/* <Typography variant="h3" color="primary.main" align="center" mt={1}>Footer here?</Typography> */}
-                {/* <Box sx={{ width: "100%" }}>
-              <img 
-                    src={waveDivider} 
-                    alt="divider"
-                    style={{ 
-                      width: "100%",
-                      display: "block"
-                    }}
-                  />
-            </Box> */}
-                <Paper
-                    variant="elevation"
-                    elevation="2"
-                    square={true}
-                    sx={{ 
-                      //  TODO: IS THIS NEEDED ANY MORE?
-                      // height: "100%" 
-                    }}
-                >
-                    <Container maxWidth="xl">
-                      <Grid container spacing={0} sx={{}}>
-                        <Grid size={{ xs: 12, md: 6 }}>
-                          <Typography
-                            variant="h3"
-                            color="primary.main"
-                            // align="center"
-                            mt={1}
-                        >
-                            Footer here?
-                        </Typography>
+                <Container maxWidth="xl">
+                    <Grid
+                        container
+                        spacing={2}
+                        sx={{ mb: 2, justifyContent: "center" }}
+                    >
+                        <Grid size={{ xs: 12, sm: 6 }}>
+                            <Typography variant="h4">
+                                Brenton Trebilcock
+                            </Typography>
+                            <Typography variant="subtitle1">
+                                Software Developer
+                            </Typography>
                         </Grid>
-                      </Grid>
-                        {/* <Typography
-                            variant="h3"
-                            color="primary.main"
-                            align="center"
-                            mt={1}
-                        >
-                            Footer here?
-                        </Typography> */}
-                        <Divider
-                          variant="fullWidth"
-                          orientation="horizontal"
-                        />
-                        <Typography variant="body1" color="text.secondary" align="center" sx={{ }}>
-                          {/* see how to add spacing here??? */}
-                          © {new Date().getFullYear()} Brenton Trebilcock
-                        </Typography>
-                    </Container>
-                </Paper>
-            </Box>
-        </footer>
+                        <Grid size={{ xs: 12, sm: 6 }}>
+                            <Typography variant="h4">Get in touch</Typography>
+                            <Link
+                                href="https://www.linkedin.com/in/brenton-trebilcock/"
+                                target="_blank"
+                                rel="noopener"
+                                sx={{
+                                    "&:hover": {
+                                        color: "primary.light",
+                                    },
+                                }}
+                            >
+                                <LinkedInIcon fontSize="large" />
+                            </Link>
+                            <Link
+                                href="https://github.com/brentont240"
+                                target="_blank"
+                                rel="noopener"
+                                sx={{
+                                    "&:hover": {
+                                        color: "primary.light",
+                                    },
+                                }}
+                            >
+                                <GitHubIcon fontSize="large" />
+                            </Link>
+                        </Grid>
+                    </Grid>
+                    <Divider variant="fullWidth" orientation="horizontal" />
+                    <Typography
+                        variant="body1"
+                        color="text.secondary"
+                        align="center"
+                        sx={{ mt: 2 }}
+                    >
+                        © {new Date().getFullYear()} Brenton Trebilcock. Created
+                        using React, Javascript, and Material UI.
+                    </Typography>
+                </Container>
+            </Paper>
+        </Box>
     );
 }
 
