@@ -144,3 +144,7 @@ export default Home;
 // https://mui.com/material-ui/react-grid/
 
 // FIXME: NOTE THINGS LIKE MY={} WILL BE REMOVED USED SX={MY:} INSTEAD!!!! (SEE DOCUMENTATION)
+
+
+// https://reversebackflip.wixsite.com/brentoneportfolio 
+// old e-portfolio^^^^
