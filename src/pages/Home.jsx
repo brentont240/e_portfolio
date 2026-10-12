@@ -12,39 +12,29 @@ import {
 } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import CardMedia from "@mui/material/CardMedia";
-import CardActionArea from "@mui/material/CardActionArea";
+import CardActionArea from "@mui/material/CardActionArea";   
 // import topDivider from "../assets/topWaves.svg";
 import avatarImg from "../images/avatarImg.jpg";
 import { GradFlow } from "gradflow";
 import { CheckScreenSize } from "../utils/checkScreenSize.js";
+// import {useTheme} from "@mui/material";
+import { gradFlowPalette, gradFlowBox } from "../styles/gradFlowStyles.js";
 
 // TODO: play with some of the colors for dark mode?
 // TODO: make it look better on smaller and larger
 // TODO: make it look better on mobile!!!
 
 function Home() {
-    // console.log(topDivider);
     return (
         // header idea: https://www.finisher.co/lab/header/
         <Box>
             <Box
-                sx={{
-                    // so the gradflow is the background
-                    position: "fixed",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100vh",
-                    zIndex: -1,
-                    pointerEvents: "none",
-                }}
+                sx={{ ...gradFlowBox }}
             >
                 {/* from https://gradflow.meera.dev/ */}
                 <GradFlow
                     config={{
-                        color1: "#673ab7",
-                        color2: "#5ccebb",
-                        color3: "#121212",
+                        ...gradFlowPalette,
                         speed: 0.5,
                         scale: 1,
                         type: "stripe",
@@ -52,25 +42,38 @@ function Home() {
                 />
             </Box>
             <Container maxWidth="xl">
-                {/* maybe use grow and make it flexable */}
+                {/* maybe use grow and make it flexible */}
                 {/* FIXME: make the text shrink for smaller screens */}
+                {/* FIXME: make the image better centered vertically (extra top space on large screens) */}
                 <Grid
                     container
                     spacing={2}
                     // mt={4}
                     alignItems="center"
                     direction={{ xs: "column", md: "row" }}
-                    sx={{ minHeight: "100vh" }}
+                    sx={{
+                        minHeight: "100vh",
+                        mb: {
+                            xs: 2,
+                            md: 0,
+                        },
+                    }}
                 >
-                    {/* TODO: play with the sizes to get it looking good!!!! */}
                     {/* TODO: play with the sizes to get it looking good!!!! */}
                     {/* <Grid size={{ xs: 10, md: 8, lg: 7 }}> */}
                     <Grid size={{ xs: 12, md: 6 }}>
-                        <Typography variant={CheckScreenSize("xs") ? "h2" : "h1"}>Brenton Trebilcock</Typography>
-                        <Typography variant={CheckScreenSize("xs") ? "h3" : "h2"}>Software Developer</Typography>
+                        <Typography
+                            variant={CheckScreenSize("xs") ? "h2" : "h1"}
+                        >
+                            Brenton Trebilcock
+                        </Typography>
+                        <Typography
+                            variant={CheckScreenSize("xs") ? "h3" : "h2"}
+                        >
+                            Software Developer
+                        </Typography>
                     </Grid>
                     {/* TODO: play with the sizes to get it looking good!!! */}
-                    {/* TODO: play with the sizes to get it looking good!!!! */}
                     {/* <Grid size={{ xs: 10, md: 6, lg: 5 }}> */}
                     <Grid size={{ xs: 12, md: 6 }}>
                         {/* <Grid size="grow"> */}
@@ -145,6 +148,26 @@ export default Home;
 
 // FIXME: NOTE THINGS LIKE MY={} WILL BE REMOVED USED SX={MY:} INSTEAD!!!! (SEE DOCUMENTATION)
 
-
-// https://reversebackflip.wixsite.com/brentoneportfolio 
+// https://reversebackflip.wixsite.com/brentoneportfolio
 // old e-portfolio^^^^
+
+// TODO: add page descriptions in the routes for the pages!!!!!!!!!
+// TODO: add the color to the lines in thje experience skills?????????!!!!!!!!!
+
+
+// TODO: TRY TO AVOID MAGIC NUMBERS!!! !!! !!!
+// TODO: TRY TO AVOID MAGIC NUMBERS!!! !!! !!!
+// TODO: TRY TO AVOID MAGIC NUMBERS!!! !!! !!! (use all caps_underscore_stuff)
+// TODO: TRY TO AVOID MAGIC NUMBERS!!! !!! !!! (like how i fixed it in experience)
+
+// TODO: ALSO IF STYLES ARE REUSED MAKE THEM A CONST ! (like how i fixed it in experience)
+
+// TODO: Delete most comments when done!
+
+
+// TODO: MAKE THE CARDS A BIT CLEANER / MODULAR (LOOK AT AppNewsUpdate IN AGRIPPON!!!)
+// TODO: MAKE THE CARDS A BIT CLEANER / MODULAR (LOOK AT AppNewsUpdate IN AGRIPPON!!!)
+// TODO: MAKE THE CARDS A BIT CLEANER / MODULAR (LOOK AT AppNewsUpdate IN AGRIPPON!!!)
+// TODO: MAKE THE CARDS A BIT CLEANER / MODULAR (LOOK AT AppNewsUpdate IN AGRIPPON!!!)
+// MAYBE USE SOMETHING WITH PROPS???
+// actually might not be optimal...?

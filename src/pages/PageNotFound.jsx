@@ -2,28 +2,18 @@ import { Box, Typography, Container, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { GradFlow } from "gradflow";
 import HomeIcon from "@mui/icons-material/Home";
+import { gradFlowPalette, gradFlowBox } from "../styles/gradFlowStyles.js";
 
 function PageNotFound() {
     return (
         <Box>
             <Box
-                sx={{
-                    // so the gradflow is the background
-                    position: "fixed",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100vh",
-                    zIndex: -1,
-                    pointerEvents: "none",
-                }}
+                sx={{  ...gradFlowBox }}
             >
                 {/* from https://gradflow.meera.dev/ */}
                 <GradFlow
                     config={{
-                        color1: "#673ab7",
-                        color2: "#5ccebb",
-                        color3: "#121212",
+                        ...gradFlowPalette,
                         speed: 0.5,
                         scale: 1.5,
                         type: "smoke",

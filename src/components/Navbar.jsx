@@ -17,7 +17,7 @@ import Stack from "@mui/material/Stack";
 
 const drawerWidth = 240;
 
-// TODO: fix so the width is better and doesnt bug out??!!!
+// TODO: fix so the width is better and doesn't bug out??!!!
 
 function Navbar(props) {
     const { window } = props;
@@ -67,7 +67,7 @@ function Navbar(props) {
                         component="div"
                         sx={{ flexGrow: 1, display: { sm: "block" } }}
                     >
-                        Brenton Tebilcock
+                        Brenton Trebilcock
                     </Typography>
                     <Box sx={{ display: { xs: "none", sm: "block" } }}>
                         <Stack direction="row" spacing={1}>

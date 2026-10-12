@@ -1,0 +1,51 @@
+{
+    "proficient": [
+        {
+            "category": "Frontend",
+            "icon": "HtmlIcon",
+            "skills": ["React", "JavaScript", "Typescript", "HTML5", "CSS3", "Bootstrap"]
+        },
+        {
+            "category": "Backend",
+            "icon": "IntegrationInstructionsIcon",
+            "skills": ["Node.js", "Express.js"]
+        },
+        {
+            "category": "APIs",
+            "icon": "CloudSyncIcon",
+            "skills": ["RESTful APIs"]
+        },
+        {
+            "category": "Databases",
+            "icon": "DatasetIcon",
+            "skills": ["Microsoft SQL Server", "MongoDB"]
+        },
+        {
+            "category": "Collaboration",
+            "icon": "GroupsIcon",
+            "skills": ["Agile", "Scrum", "Jira", "Confluence", "GitHub", "Git", "Bitbucket"]
+        }
+    ],   
+    "familiar": [
+        {
+            "category": "Other Languages",
+            "icon": "CodeIcon",
+            "skills": ["C", "C++", "Java", "Python", "Erlang"]
+        },
+        {
+            "category": "Cloud & DevOps",
+            "icon": "CloudIcon",
+            "skills": ["AWS", "Heroku", "Netlify", "PowerShell"]
+        },
+        {
+            "category": "Testing",
+            "icon": "AssignmentIcon",
+            "skills": ["Jest", "Vitest"]
+        },
+        {
+            "category": "UI Libraries",
+            "icon": "MenuBookIcon",
+            "skills": ["Material UI"]
+        }
+    ]
+}

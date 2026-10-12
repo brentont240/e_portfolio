@@ -16,7 +16,7 @@ import {
     // useMediaQuery,
 } from "@mui/material";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
-import IconImg from "./IconImg";
+import IconImg from "../IconImg";
 
 function SkillCard({ skills }) {
     // https://mui.com/material-ui/react-use-media-query/
@@ -33,7 +33,14 @@ function SkillCard({ skills }) {
                         {/* height 100% makes it so they are same height */}
                         <Card sx={{ height: "100%" }} className="hoverGrow">
                             <CardContent>
-                                <Divider>
+                                <Divider
+                                    sx={{
+                                        "&::before, &::after": {
+                                            borderColor: "secondary.main",
+                                            // borderWidth: 1,
+                                        },
+                                    }}
+                                >
                                     <Box
                                         sx={{
                                             border: 1,

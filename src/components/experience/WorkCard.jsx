@@ -2,11 +2,9 @@ import { Box, Typography, Grid, Card, CardContent } from "@mui/material";
 
 function WorkCard({ work }) {
     return (
-        //TODO: FIX ISSUE WITH KEYS!!!!
         <Box>
             <Grid container spacing={3}>
                 {work.map((item, index) => (
-                    // should the key be different???!!!
                     <Grid size={{ xs: 12, md: 6 }} key={index}>
                         <Card sx={{ height: "100%" }} className="hoverGrow">
                             <CardContent>

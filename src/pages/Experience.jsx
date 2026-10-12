@@ -8,26 +8,49 @@ import {
     ButtonGroup,
     Paper,
 } from "@mui/material";
-import proficientSkills from "../data/proficientSkills.json";
-import familiarSkills from "../data/familiarSkills.json";
+// import proficientSkills from "../data/proficientSkills.json";
+// import familiarSkills from "../data/familiarSkills.json";
+import skills from "../data/skills.json";
 import education from "../data/education.json";
 import work from "../data/work.json";
-import SkillSection from "../components/SkillSection.jsx";
-import EducationCard from "../components/EducationCard.jsx";
-import WorkCard from "../components/WorkCard.jsx";
+import SkillSection from "../components/experience/SkillSection.jsx";
+import EducationCard from "../components/experience/EducationCard.jsx";
+import WorkCard from "../components/experience/WorkCard.jsx";
 import { CheckScreenSize } from "../utils/checkScreenSize.js";
 import { useLocation } from "react-router-dom";
+
+const PDF_MAX_HEIGHT = "800px"
+const SCROLL_MARGIN_OFFSET = "70px"
+
+const experienceSectionStyle = {
+    my: 2,
+    scrollMarginTop: SCROLL_MARGIN_OFFSET
+}
 
 function Experience() {
     const location = useLocation();
 
     const scrollToSection = (id, smooth) => {
         const section = document.getElementById(id);
-        console.log(section);
+        // console.log(section);
         if (section) {
             section.scrollIntoView({ behavior: smooth ? "smooth" : "auto" });
         }
     };
+
+    // FIXME: SEE IF THIS IS EVEN WORKING!!??
+    const iFrameAdjust = () => {
+        let iFrame = document.getElementById("resume")
+        iFrame = iFrame.querySelector("iframe")
+
+        console.log(iFrame)
+
+        if (iFrame) {
+            // iFrame.style.height = "400px"
+            // iFrame.style.height = iFrame.contentWindow.document.body.scrollHeight + "px"
+            console.log(iFrame.contentWindow.document.body.scrollHeight + "px")
+        }
+    }
 
     useEffect(() => {
         // jumps to resume section if the button is clicked in the navbar
@@ -96,22 +119,21 @@ function Experience() {
                         </ButtonGroup>
                     </Box>
                     {/* TODO: Add more skills and other things that aren't on resume!!! !!! !!! !!! */}
-                    {/* FIXME: ADD VITE TESTING TO RESUME AND UPDATE AGRIPPON TEXT !!! !!! !!! !!! */}
-                    <Box sx={{ my: 2, scrollMarginTop: 70 }} id="skills">
+                    <Box sx={experienceSectionStyle} id="skills">
                         <Divider className="sectionDividerPrimary">
                             <Typography variant="h2">Skills</Typography>
                         </Divider>
                         <SkillSection
                             title={"Proficient"}
-                            skills={proficientSkills}
+                            skills={skills.proficient}
                         />
                         <Box sx={{ mb: 2 }} />
                         <SkillSection
                             title={"Familiar With"}
-                            skills={familiarSkills}
+                            skills={skills.familiar}
                         />
                     </Box>
-                    <Box sx={{ my: 2, scrollMarginTop: 70 }} id="education">
+                    <Box sx={experienceSectionStyle} id="education">
                         <Divider
                             className="sectionDividerPrimary"
                             sx={{ mb: 2 }}
@@ -121,7 +143,7 @@ function Experience() {
                         <EducationCard education={education} />
                     </Box>
                     <Box
-                        sx={{ my: 2, scrollMarginTop: 70 }}
+                        sx={experienceSectionStyle}
                         id="workExperience"
                     >
                         <Divider
@@ -142,7 +164,7 @@ function Experience() {
                         </Divider>
                         <WorkCard work={work} />
                     </Box>
-                    <Box sx={{ my: 2, scrollMarginTop: 70 }} id="resume">
+                    <Box sx={experienceSectionStyle} id="resume">
                         <Divider
                             className="sectionDividerPrimary"
                             sx={{ mb: 2 }}
@@ -152,13 +174,15 @@ function Experience() {
                         {/* fix things for this to look better */}
                         <iframe
                             // src={"/e_portfolio/brentonResume.pdf"}
-                            src={`/e_portfolio/brentonResume.pdf${ CheckScreenSize("sm") ? "#zoom=page-width" : ""}`}
+                            // #zoom=FitW not sure if this is working or not
+                            src={`/e_portfolio/brentonResume.pdf${ CheckScreenSize("sm") ? "#zoom=FitW" : ""}`}
                             type="application/pdf"
                             style={{
                                 width: "100%",
-                                height: "clamp(750px, 80vh, 100vh)",
+                                height: `min(100vh, ${PDF_MAX_HEIGHT})`,
                                 border: "none"
                             }}
+                            onLoad={iFrameAdjust}
                         />
                     </Box>
                 </Box>

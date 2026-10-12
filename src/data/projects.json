@@ -1,10 +1,38 @@
 [
     {
-        "title": "test",
-        "img": "myAgencySystem"
+        "title": "Scam Sentry",
+        "img": "scamSentry",
+        "url": "https://scamsentry.netlify.app/",
+        "type": "Senior project (website)",
+        "where": "Brigham Young University-Idaho",
+        "tools": "JavaScript, React, Node.js, Bootstrap, and MongoDB",
+        "description": "This was my senior project for college. It's a website to help prevent scams and teach people about scams. Note that some of the tools aren't functional anymore since the heroku backend has been disconnected after they changed their policies."
     },
     {
-        "title": "test",
-        "img": "myAgencySystem"
+        "title": "My Agency System",
+        "img": "myAgencySystem",
+        "url": "https://myagencysystem.com/",
+        "type": "Professional website",
+        "where": "Ullrich Insurance Agency",
+        "tools": "WordPress",
+        "description": "Website created to onboard new agencies to have access to custom professional tools. There's the main site for onboarding and information and a separate part of the site that contains each client's site and their tools."
+    },
+    {
+        "title": "Ullrich Insurance Policy Service Center",
+        "img": "policyServiceCenter",
+        "url": "https://www.ullrichinsurance.com/policy-service-center/",
+        "type": "Professional website",
+        "where": "Ullrich Insurance Agency",
+        "tools": "JavaScript, HTML, CSS, and WordPress",
+        "description": "Created a new custom dashboard for clients to easily find and choose what they need help with. Has built in forms and a custom ui built from scratch."
+    },
+    {
+        "title": "Active Life Pain Center",
+        "img": "activeLife",
+        "url": "https://activelifepaincenter.com/",
+        "type": "Professional website",
+        "where": "Dotted Dot Marketing",
+        "tools": "WordPress and Divi",
+        "description": "A health care site that I did work for while doing contract work at Dotted Dot. I did many updates to match new the new UI given to me. Note there are many other sites I also worked on while working at Dotted Dot that appear to be updated or offline now."
     }
 ]

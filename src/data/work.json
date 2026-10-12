@@ -5,7 +5,7 @@
         "to": "Now",
         "jobTitle": "Software Developer",
         "details": [
-            "Develop and maintain full-stack web applications using React, AWS, Node.js, and MongoDB",
+            "Develop and maintain full-stack web applications using React, AWS, Node.js, TypeScript, JavaScript, and MongoDB",
             "Created and Implement unit tests for front and back end using Jest",
             "Worked closely with QA and developers using Jira and GitHub",
             "Resolve Jira tickets by implementing bug fixes and designing new features for the application"
@@ -27,7 +27,7 @@
     {
         "companyName": "Ullrich Insurance Agency",
         "from": "April 2021",
-        "to": "December 2022",
+        "to": "May 2022",
         "jobTitle": "Software Developer",
         "details": [
             "Redesigned policy service center with JavaScript and CSS to provide a more seamless experience for customers",
@@ -45,7 +45,7 @@
         "details": [
             "Developed modern and responsive websites for clients utilizing CSS, WordPress, Wix, and Divi",
             "Created and interpreted website mockups using Figma, allowing for clear communication with the design team and efficient development of the final product",
-            "Remodeled client’s existing websites to be more appealing, functional, and user-friendly"
+            "Remodeled client's existing websites to be more appealing, functional, and user-friendly"
         ]
     }
 ]

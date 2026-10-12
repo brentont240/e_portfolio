@@ -5,7 +5,7 @@ Visit [here](https://brentont240.github.io/e_portfolio/)
 ## Tech Stack
 
 - React 
-- Javascript
+- JavaScript
 - Material UI
 - HTML
 - CSS
